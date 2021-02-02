@@ -1,0 +1,554 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e0e3e6;
+}
+
+/* Styling of navbar starts here */
+.nav-bar {
+  /* border: 1px solid blue; */
+  position: relative;
+}
+.nav-wrapper {
+  /* border: 1px solid red; */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  transition: background-color 200ms linear;
+}
+.burger {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+}
+.menu-drawer {
+  position: fixed;
+  height: 100vh;
+  background-color: #006199;
+  width: 250px;
+  left: -100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: left 1s;
+}
+.menu-drawer.open {
+  left: 0;
+}
+.menu-drawer ul {
+  list-style: none;
+}
+.menu-drawer ul a {
+  color: white !important;
+
+  padding: 10px 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+.nav-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: none;
+}
+.nav-overlay.show {
+  display: block;
+}
+.nav-wrapper.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.nav-wrapper.scrolled .burger {
+  color: black;
+}
+.nav-wrapper.scrolled a {
+  color: black;
+}
+.nav-wrapper.scrolled .register-btn {
+  border: 1px solid black;
+}
+
+.navlinks {
+  list-style: none;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.navlinks li a {
+  /* border: 1px solid red; */
+  padding: 5px 15px;
+  display: inline-block;
+  color: #e0e3e6;
+}
+
+.register-btn {
+  border: 1px solid #e0e3e6;
+  border-radius: 2px;
+}
+.logo-wrap {
+  /* border: 1px solid black; */
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+}
+/* Styling of navbar ends here */
+
+/* Header Styling starts*/
+#cta {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../imgs/bg-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.subtitle {
+  font-size: 20px;
+}
+.text-custom-white {
+  color: #e0e3e6;
+}
+.text-blue {
+  color: #0e81be;
+}
+.text-dark-blue {
+  color: #154164;
+}
+.title {
+  font-size: 50px;
+}
+.earn-btn {
+  background-color: #139afd;
+  color: #e0e3e6;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+.wave-1 {
+  bottom: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* Header styling ends */
+
+/* *********Second section starts */
+.benefits {
+  list-style: none;
+}
+.benefits > li {
+  margin-bottom: 20px;
+}
+.benefit {
+  position: relative;
+  display: flex;
+  /* border: 1px solid red; */
+  align-items: center;
+}
+.benefit::before {
+  color: white;
+  content: "\f00c"; /* You should use \ and not /*/
+  font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  background-color: #36ce9f;
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.benefit > span:first-child {
+  font-weight: 700;
+}
+.benefit span {
+  font-weight: 600;
+}
+
+.steps {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  flex-direction: column;
+}
+.step {
+  display: flex;
+  /* border: 1px solid red; */
+  margin-bottom: 40px;
+}
+.step span > i {
+  color: #2c90c6;
+}
+.step:last-child {
+  margin-bottom: 0px;
+}
+.step > span:first-child {
+  margin-right: 5px;
+  color: #1c4769;
+  font-weight: bold;
+}
+.step > span:last-child {
+  color: #1c4769;
+  font-weight: bold;
+  position: relative;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-20px);
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: #4e9ad2;
+  transform: translateY(10px);
+  margin-right: 5px;
+}
+.mail {
+  font-size: 40px;
+}
+.row-mt {
+  margin-top: 100px;
+}
+/* ***********Second section ends */
+/* ****************sec three starts here  */
+#sec-three {
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../imgs/bg-img-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  width: 100%;
+}
+
+.wave-2 {
+  position: absolute;
+  top: 0;
+}
+.bg-dark-blue {
+  background-color: #0e2031;
+}
+.sec-card {
+  transform: translateY(37px);
+}
+.earn-now-card {
+  padding: 80px 50px;
+}
+.card-title {
+  font-size: 50px;
+}
+.card-btn {
+  background-color: #0394e2;
+  color: white;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 5px;
+}
+/* *************sec three ends here */
+/* *******Slider and Gallery section starts here */
+#sec-four {
+  padding: 100px 0px;
+}
+.img-big.img-1 {
+  background-image: url("../imgs/person-1.jpg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-small.img-2 {
+  background-image: url("../imgs/person-2.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-small.img-3 {
+  background-image: url("../imgs/person-3.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-big.img-4 {
+  background-image: url("../imgs/person-4.jpg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.person-name {
+  font-size: 20px;
+}
+.feedback {
+  font-size: 16px;
+}
+.owl-theme .owl-dots,
+.owl-theme .owl-nav {
+  text-align: left;
+  margin-left: 60px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  background-color: #ccdfeb;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #006199;
+}
+
+.person-review-card {
+  position: relative;
+  display: flex;
+}
+.person-review-card::before {
+  color: #eceff2;
+  content: "\f10d"; /* You should use \ and not /*/
+  font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-block;
+  margin-right: 10px;
+}
+/* **********Slider and Gallery Section ends here  */
+/* *****************************FOOTER STARTS HERE ************** */
+
+#footer {
+  padding-top: 100px;
+  background-color: #0e2031;
+}
+.footer-logo-wrap {
+  height: 50px;
+  width: 100%;
+}
+.text-silver {
+  color: #c3c7cb;
+}
+.company-info::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: #c3c7cb;
+  bottom: -13px;
+  left: 0;
+}
+.company-info {
+  font-size: 14px;
+  position: relative;
+}
+.about-company p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.about-company p span {
+  color: white;
+  font-weight: bold;
+}
+.contact-us-box {
+  /* border: 1px solid red; */
+  width: 250px;
+  margin-left: auto;
+}
+
+.contact-us-title,
+.follow-us-title {
+  font-size: 16px;
+}
+.contact-us-box p {
+  font-size: 12px;
+}
+.address {
+  position: relative;
+  display: flex;
+  /* border: 1px solid white; */
+  align-items: center;
+}
+.address::before {
+  color: #0390dc;
+  content: "\f3c5"; /* You should use \ and not /*/
+  font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.phone {
+  display: flex;
+  position: relative;
+  /* border: 1px solid white; */
+  align-items: center;
+}
+.phone::before {
+  color: #0390dc;
+  content: "\f879"; /* You should use \ and not /*/
+  font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.socials span {
+  background-color: #0390dc;
+  padding: 5px 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.socials span i {
+  color: white;
+}
+.follow-us-box {
+  width: 70%;
+  /* border: 1px solid red; */
+  margin-left: auto;
+}
+.cr-tagline {
+  font-size: 12px;
+  margin-top: 90px;
+}
+.copyright-tagline-box {
+  padding: 10px;
+}
+
+/* ************************FOOTER ENDS HERE ***************** */
+@media (max-width: 1200px) {
+  .earn-now-card {
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 992px) {
+  .follow-us-box {
+    width: 100%;
+    padding: 20px;
+  }
+  .contact-us-box {
+    width: 100%;
+    padding: 20px;
+  }
+  .about-company {
+    padding: 20px;
+  }
+  .about-company p {
+    margin-top: 0px;
+  }
+  .img-small.img-2,
+  .img-big.img-4 {
+    margin-left: 0 !important;
+  }
+  .img-small.img-2 {
+    margin-top: 8px;
+  }
+  .img-big.img-1 {
+    background-position: 50% 12%;
+  }
+  .img-small.img-2 {
+    background-position: 50% 12%;
+  }
+  .img-small.img-3 {
+    background-position: 50% 12%;
+  }
+  .what-people {
+    margin-top: 30px;
+  }
+  .what-people,
+  .owl-theme .owl-dots,
+  .owl-theme .owl-nav {
+    text-align: center;
+    margin-left: 0px;
+  }
+  .heading-sec-box {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    text-align: center;
+  }
+  .navlinks {
+    display: none !important;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .earn-now-card {
+    padding: 30px;
+  }
+  .card-title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .menu-drawer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .card-btn {
+    padding: 15px;
+    font-size: 14px;
+  }
+  .what-people {
+    font-size: 30px;
+  }
+}
